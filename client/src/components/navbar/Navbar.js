@@ -31,7 +31,12 @@ const Navbar = () => {
           />
           <div className="rounded-lg ">Register</div>
         </div>
-        <div className="flex flex-col h-11 w-11 items-center hover:cursor-pointer p-2 bg-slate-700 rounded-[100%] hover:bg-gradient-to-r from-red-800 to-red-700  justify-center">
+        <a
+          href="https://www.fcjamshedpur.com/academy"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-col h-11 w-11 items-center hover:cursor-pointer p-2 bg-slate-700 rounded-[100%] hover:bg-gradient-to-r from-red-800 to-red-700  justify-center"
+        >
           <img
             src={tfa}
             alt="tfalogo"
@@ -42,7 +47,7 @@ const Navbar = () => {
             }}
           />
           <div className="text-[7px]">TFA</div>
-        </div>
+        </a>
       </div>
     </div>
   );
