@@ -1,0 +1,17 @@
+{
+  "name": "jfc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "back": "cd backend && nodemon server.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run back\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

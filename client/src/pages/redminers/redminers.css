@@ -1,0 +1,44 @@
+.redminers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.redminers-title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #7e2653, #702a58, #652c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.redminers-tiles {
+  display: flex;
+  height: 175px;
+  width: 100%;
+  gap: 20px;
+  /* background-color: cornflowerblue; */
+}
+.red-tiles {
+  flex: 1;
+  background: linear-gradient(
+    28deg,
+    rgba(0, 84, 171, 1) 0%,
+    rgb(208, 1, 1) 100%
+  );
+  transition: transform 0.2s ease;
+}
+
+.red-tiles:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

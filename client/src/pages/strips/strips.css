@@ -1,0 +1,20 @@
+.strip-wrapper {
+  height: 110px;
+  width: 100%;
+  background: linear-gradient(0deg, #242555 0%, #191733, #181632, #53122b);
+
+  position: relative;
+}
+
+.strip-container {
+  height: 110px;
+  width: 100%;
+  top: 10px;
+  position: absolute;
+  color: #c2bac2;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}

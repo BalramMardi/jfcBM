@@ -1,0 +1,49 @@
+.homestore-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* background-color: blueviolet; */
+  width: 100%;
+  height: max-content;
+  gap: 40px;
+}
+.homestore-header {
+  /* position: absolute; */
+  /* top: 10px; */
+  height: 70px;
+  font-size: 45px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #7e2653, #702a58, #652c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.homestore-bottom {
+  /* position: absolute; */
+  /* top: 50px; */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* background-color: aqua; */
+  width: 80%;
+}
+.homestore-bottom div {
+  background: linear-gradient(
+    28deg,
+    rgba(0, 84, 171, 1) 0%,
+    rgb(208, 1, 1) 100%
+  );
+  flex: 1;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.homestore-tiles {
+  transition: transform 0.2s ease;
+}
+
+.homestore-tiles:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

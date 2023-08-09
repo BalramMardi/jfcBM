@@ -1,0 +1,66 @@
+.banner {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../../img/strips/back-7.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  position: relative;
+}
+.banner-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.banner-top button {
+  position: absolute;
+  right: 0;
+  background-color: rgb(214, 0, 0);
+  margin: 10px;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.banner-promo {
+  height: 100px;
+  width: 100%;
+
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+.banner-promo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.tata {
+  transform: scale(0.8);
+}
+
+.sbi {
+  transform: scale(0.4);
+}
+
+.banner-bottom {
+  font-size: 14px;
+  position: absolute;
+  top: 170px;
+  font-weight: bold;
+}
