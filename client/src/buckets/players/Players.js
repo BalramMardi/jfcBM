@@ -75,7 +75,9 @@ const Players = () => {
                   <div className="players-extra-appear-number">{p.appears}</div>
                 </div>
                 <div className="players-extra-goals">
-                  <div className="players-extra-goals-title">Goals</div>
+                  <div className="players-extra-goals-title">
+                    {p.position === "Goalkeeper" ? "Save" : "Goal"}{" "}
+                  </div>
                   <div className="players-extra-goals-number">{p.goals}</div>
                 </div>
                 <div className="players-extra-assist">
