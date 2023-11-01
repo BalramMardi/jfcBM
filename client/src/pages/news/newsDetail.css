@@ -1,0 +1,65 @@
+.newsD-container {
+  /* margin-top: 114px; */
+  background-color: blueviolet;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.news-img1 {
+  width: 100%;
+  height: 480px;
+}
+
+.news-img2 {
+  width: 1120px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+}
+.news-img2 img {
+  object-fit: contain;
+}
+
+.news-article {
+  background-color: whitesmoke;
+  width: 100%;
+  /* margin-top: 20px; */
+  height: fit-content;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.news-heading {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-weight: bold;
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 50px;
+  margin: 10px;
+}
+.news-desc-large {
+  font-family: Helvetica, sans-serif;
+
+  width: 50%;
+  height: auto;
+  font-size: 20px;
+  text-align: left;
+  font-weight: lighter;
+  color: gray;
+}
+
+pre {
+  display: block;
+  unicode-bidi: embed;
+  /* font-family: monospace; */
+  white-space: break-spaces;
+  /* color: aqua; */
+}

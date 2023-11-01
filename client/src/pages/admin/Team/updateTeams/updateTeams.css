@@ -1,0 +1,12 @@
+.createPlayers-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  background-color: #f0f0f0;
+}
+.createPlayers-right {
+  height: 100vh;
+  width: 100%;
+  background-color: dodgerblue;
+}

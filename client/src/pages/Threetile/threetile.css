@@ -5,7 +5,7 @@
 }
 
 .tiles {
-  background-color: aqua;
+  /* background-color: aqua; */
   height: 500px;
   /* border: white solid 2px; */
   box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
@@ -36,18 +36,26 @@ img {
     rgba(2, 0, 36, 1) 41%,
     rgba(0, 212, 255, 0) 100%
   ); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 23px;
   transition: font-size 0.2s ease-in-out, transform 0.2s ease-in-out;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-weight: bold;
+  width: 305px;
+  line-height: 100%;
 }
 .des {
+  width: 490px;
   visibility: hidden;
   transition: visibility 0.1s ease, transform 0.2s ease;
+  margin-top: 20px;
 }
 
-.tiles:hover {
+/* .tiles:hover {
   flex: 3;
 }
 .tiles:hover .title {
@@ -57,7 +65,7 @@ img {
 .tiles:hover .des {
   visibility: visible;
   transform: translateY(-40px);
-}
+} */
 
 .overlay {
   z-index: 5;
@@ -71,4 +79,106 @@ img {
     rgba(2, 0, 36, 1) 5%,
     rgba(0, 212, 255, 0) 100%
   );
+}
+
+/* =====update===== */
+
+.button {
+  /* background-color: aqua; */
+  height: 500px;
+  /* border: white solid 2px; */
+  box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  transition: flex 0.5s ease-in-out, width 1s ease, height 1s ease;
+  position: relative;
+  justify-content: center;
+}
+
+.button1 {
+  /* background-color: aqua; */
+  height: 500px;
+  /* border: white solid 2px; */
+  box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+  display: flex;
+  flex: 3;
+  overflow: hidden;
+  transition: flex 0.5s ease, width 1s ease, height 1s ease, scale 0.5s ease;
+
+  position: relative;
+  justify-content: center;
+}
+
+.button2 {
+  /* background-color: aqua; */
+  height: 500px;
+  /* border: white solid 2px; */
+  box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+  display: flex;
+  flex: 3;
+  overflow: hidden;
+  transition: flex 0.5s ease, width 1s ease, height 1s ease, scale 0.5s ease;
+  position: relative;
+  justify-content: center;
+}
+
+.button3 {
+  /* background-color: aqua; */
+  height: 500px;
+  /* border: white solid 2px; */
+  box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+  display: flex;
+  flex: 3;
+  overflow: hidden;
+  transition: flex 0.5s ease, width 1s ease, height 1s ease, scale 0.5s ease;
+  position: relative;
+  justify-content: center;
+}
+
+.button1:hover {
+  flex: 3;
+  cursor: pointer;
+}
+
+.button1 .title {
+  /* font-size: 50px; */
+  transform: translateY(-40px) scale(1.5);
+}
+.button1 .des {
+  visibility: visible;
+  transform: translateY(-40px);
+}
+
+.button2:hover {
+  flex: 3;
+  cursor: pointer;
+}
+.button2 .title {
+  /* font-size: 50px; */
+  transform: translateY(-40px) scale(1.5);
+}
+.button2 .des {
+  visibility: visible;
+  transform: translateY(-40px);
+}
+
+.button3:hover {
+  flex: 3;
+  cursor: pointer;
+}
+.button3 .title {
+  /* font-size: 50px; */
+  transform: translateY(-40px) scale(1.5);
+}
+.button3 .des {
+  visibility: visible;
+  transform: translateY(-40px);
+}
+
+.imgscale {
+  scale: 1.5;
+}
+.imgnotscale {
+  scale: 1;
 }

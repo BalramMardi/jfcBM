@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-evenly;
   background-image: url("../../img/strips/back-10.png");
+
   background-position: center;
   background-size: 1536px 627px;
   gap: 20px;
@@ -38,6 +39,8 @@
     rgba(0, 84, 171, 1) 0%,
     rgb(208, 1, 1) 100%
   );
+  background-image: url("../../img/banner/backpic.png"),
+    linear-gradient(28deg, rgba(1, 72, 148, 0.563) 0%, #20295d 50%);
 
   color: white;
   height: 400px;
@@ -57,17 +60,25 @@
   transform: scale(1.6);
 }
 
-.players-info {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  background: rgb(23, 0, 5);
+.players-cards-topback {
   background: linear-gradient(
     0deg,
     rgba(23, 0, 5, 1) 0%,
     rgba(63, 94, 251, 0) 100%
   );
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 215px;
+}
+
+.players-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* background: rgb(23, 0, 5); */
+
   z-index: 0;
   height: 100%;
 }
@@ -194,3 +205,7 @@
   width: 400px !important;
   margin: 0 20px !important;
 } */
+
+.react-multiple-carousel__arrow--left {
+  left: calc(4% + -32px);
+}

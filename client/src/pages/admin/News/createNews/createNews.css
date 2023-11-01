@@ -1,0 +1,13 @@
+.createNews-container {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+
+  background-color: #f0f0f0;
+}
+.createNews-right {
+  height: fit-content;
+  width: 100%;
+  margin-left: 20px;
+  /* background-color: dodgerblue; */
+}

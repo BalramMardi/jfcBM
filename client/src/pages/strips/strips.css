@@ -11,10 +11,27 @@
   width: 100%;
   top: 10px;
   position: absolute;
-  color: #c2bac2;
+  color: #ffffff;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
+}
+
+.partner-promo {
+  height: 100px;
+  width: 100px;
+
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+.partner-promo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

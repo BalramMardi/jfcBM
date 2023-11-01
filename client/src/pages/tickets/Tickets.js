@@ -10,9 +10,8 @@ const Tickets = () => {
           <h1>JFC Tickets</h1>
         </div>
         <div className="ticket-bottom">
-          <div className="ticket-tiles">Men`s Football</div>
-          <div className="ticket-tiles">Stadium Tour</div>
-          <div className="ticket-tiles">Women`s Football</div>
+          <div className="ticket-tiles"></div>
+          {/* <div className="ticket-tiles">Stadium Tour</div> */}
         </div>
       </div>
       <div className="line-match"></div>

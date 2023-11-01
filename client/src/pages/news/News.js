@@ -1,68 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./news.css";
+import { useNavigate } from "react-router";
 
-const newsdata = [
-  {
-    title: "Clean the kitchen",
-    description:
-      "Mop the floor, wipe the countertop and don't forget to take out the trash!",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Call Mom",
-    description: "It's her birthday!",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-  {
-    title: "Water flowers",
-    description: "They need water, or they will die.",
-    src: "https://previews.123rf.com/images/natursports/natursports1408/natursports140800080/31006503-fcb-players-posing-for-photos-at-gamper-friendly-match-between-fc-barcelona-and-club-leon-fc-final.jpg",
-  },
-];
+import axios from "axios";
 
 const News = () => {
+  const navigate = useNavigate();
+  const [news, setNews] = useState([]);
+
+  //getallNews
+  const getAllNews = async () => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/news/get-news`
+      );
+      setNews(data.news);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllNews();
+  }, []);
   return (
     <div className="news-container">
       <div className="news-title">JFC News</div>
       <div className="news-tiles">
-        {newsdata.map((e, key) => {
+        {news?.map((e, key) => {
           return (
-            <div key={key} className="newsdata-tiles">
+            <div
+              key={key}
+              className="newsdata-tiles"
+              onClick={() => navigate(`/news/${e.slug}`)}
+            >
               <div className="newsdata-tiles-img">
-                <img src={e.src} alt="logo" height="100%" width="100%" />
+                <img
+                  src={`${process.env.REACT_APP_API}/api/v1/news/news-photo/${e._id}`}
+                  alt={e.title}
+                  height="100%"
+                  width="100%"
+                />
               </div>
               <div className="newsdata-tiles-data">
-                <div className="newsdata-tiles-title">{e.title}</div>
-                <div className="newsdata-tiles-des">{e.description}</div>
+                <text className="newsdata-tiles-title">
+                  {e.title.split(/\s+/).slice(0, 13).join(" ")} ...
+                </text>
+                <div className="newsdata-tiles-des">
+                  {e.desc.split(/\s+/).slice(0, 15).join(" ")} ...
+                </div>
               </div>
               <div className="newsdata-tiles-bottom">
-                <div className="newsdata-team">🔴 team</div>
-                <div className="newsdata-date">date</div>
+                <div className="newsdata-team">🔴{e.team} team</div>
+                <div className="newsdata-date">{e.date}</div>
               </div>
             </div>
           );

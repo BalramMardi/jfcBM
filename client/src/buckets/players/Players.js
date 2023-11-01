@@ -3,12 +3,9 @@ import "./players.css";
 import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-import player from "../../img/players/first.png";
 
 import axios from "axios";
 const Players = () => {
@@ -61,6 +58,8 @@ const Players = () => {
                   alt={p.name}
                 />
               </div>
+              <div className="players-cards-topback"></div>
+
               <div className="players-info">
                 <div className="players-info-top">
                   <div className="players-info-number">{p.number}</div>

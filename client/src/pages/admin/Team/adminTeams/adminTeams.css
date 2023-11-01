@@ -1,0 +1,212 @@
+.teams-container {
+  /* background-color: aquamarine; */
+  height: max-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-position: center;
+  background-size: 1536px 627px;
+  gap: 20px;
+}
+
+.teams-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #ffffff;
+  height: 70px;
+  text-transform: capitalize;
+  margin-top: 34px;
+  /* background-color: aliceblue; */
+}
+
+.teams-carousel {
+  /* background-color: blueviolet; */
+  width: 1428px;
+  height: 460px;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.teams-cards {
+  background: rgb(0, 84, 171);
+  background: linear-gradient(
+    28deg,
+    rgba(0, 84, 171, 1) 0%,
+    rgb(208, 1, 1) 100%
+  );
+  background-image: linear-gradient(
+    28deg,
+    rgba(1, 72, 148, 0.563) 0%,
+    #20295d 50%
+  );
+
+  color: white;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+  /* change it */
+}
+
+.teams-cards-img {
+  position: absolute;
+  top: 40px;
+}
+
+.teams-cards-topback {
+  background: linear-gradient(
+    0deg,
+    rgba(23, 0, 5, 1) 0%,
+    rgba(63, 94, 251, 0) 100%
+  );
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 215px;
+}
+
+.teams-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* background: rgb(23, 0, 5); */
+
+  z-index: 0;
+  height: 100%;
+}
+
+.teams-info-top {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: transform 0.3s ease;
+}
+
+.teams-cards:hover .teams-info-top {
+  transform: translateY(-50px);
+}
+
+.teams-info-position {
+  position: absolute;
+  top: 350px;
+  text-transform: capitalize;
+  font-family: "Encode Sans", sans-serif;
+
+  transition: transform 0.3s ease;
+}
+.teams-cards:hover .teams-info-position {
+  transform: translateY(-50px);
+}
+
+.teams-info-back {
+  position: absolute;
+  top: 210px;
+  width: auto;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 95px;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.3;
+  background: linear-gradient(to bottom, #ffffff, rgba(101, 44, 94, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Encode Sans", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.teams-cards:hover .teams-info-back {
+  transform: translateY(-30px);
+}
+
+.teams-extra {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  position: absolute;
+  top: 400px;
+
+  font-family: "Encode Sans", sans-serif;
+
+  transition: transform 0.3s ease;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.teams-cards:hover .teams-extra {
+  transform: translateY(-72px);
+}
+
+.teams-extra-appear {
+  /* background-color: chocolate; */
+  width: 100px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.teams-extra-appear-title {
+  font-size: 14px;
+}
+.teams-extra-appear-number {
+  font-size: 30px;
+}
+
+.teams-extra-goals {
+  /* background-color: darkslategray; */
+  width: 100px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.teams-extra-goals-title {
+  font-size: 14px;
+}
+.teams-extra-goals-number {
+  font-size: 30px;
+}
+.teams-extra-assist {
+  /* background-color: chocolate; */
+  width: 100px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.teams-extra-assist-title {
+  font-size: 14px;
+}
+.teams-extra-assist-number {
+  font-size: 30px;
+}
+
+/* .react-multi-carousel-track li {
+    width: 400px !important;
+    margin: 0 20px !important;
+  } */
+
+.react-multiple-carousel__arrow--left {
+  left: calc(4% + -32px);
+}

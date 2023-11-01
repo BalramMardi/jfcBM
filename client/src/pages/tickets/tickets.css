@@ -27,6 +27,8 @@
   gap: 40px;
   /* background-color: aqua; */
   width: 80%;
+  height: fit-content;
+  /* background-color: aqua; */
 }
 .ticket-bottom div {
   background: linear-gradient(
@@ -35,7 +37,10 @@
     rgb(208, 1, 1) 100%
   );
   flex: 1;
-  height: 350px;
+  height: 240px;
+  width: 100%;
+
+  background-image: url("../../img/strips/ticket.png");
 }
 
 .ticket-tiles {

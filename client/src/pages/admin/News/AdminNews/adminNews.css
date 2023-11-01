@@ -1,0 +1,120 @@
+.news-container {
+  width: 100%;
+  height: auto;
+  /* background-color: darksalmon; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.news-title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  background-color: white;
+}
+
+.news-tiles {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  /* background-color: cornflowerblue; */
+}
+
+.newsdata-tiles {
+  background-color: white;
+  height: 270px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: rgb(218, 218, 218) solid 0.1px;
+  transition: all 0.3s ease, border 0.1s ease;
+}
+.newsdata-tiles-img {
+  width: 100%;
+  height: 200px;
+  background-color: antiquewhite;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.newsdata-tiles-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 6px;
+}
+
+.newsdata-tiles-data {
+  position: absolute;
+  top: 177px;
+  width: 100%;
+  height: 110px;
+  background-color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.newsdata-tiles-bottom {
+  position: absolute;
+  bottom: 12px;
+  /* background-color: #702a58; */
+  /* color: red; */
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.newsdata-tiles-des {
+  opacity: 0;
+  color: gray;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+.newsdata-tiles:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px 2px gray;
+  -moz-box-shadow: 0 0 5px 2px gray;
+  box-shadow: 0 0 5px 2px gray;
+
+  border: none;
+}
+
+.newsdata-tiles:hover .newsdata-tiles-data {
+  transform: translateY(-50px);
+  cursor: pointer;
+}
+
+.newsdata-tiles:hover .newsdata-tiles-img {
+  transform: translateY(-10px);
+  transform: rotate(5deg);
+  transform: scale(1.1);
+}
+
+.newsdata-tiles:hover .newsdata-tiles-des {
+  opacity: 1;
+}
+
+.newsdata-team {
+  color: red;
+}
+
+.newsdata-date {
+  color: gray;
+}

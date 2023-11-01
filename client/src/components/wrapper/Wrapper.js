@@ -10,10 +10,11 @@ import Part from "../../buckets/part/Part";
 import Players from "../../buckets/players/Players";
 import Banner from "../../buckets/banner/Banner";
 import Trophy from "../../buckets/trophy/Trophy";
+import Layout from "../../layout/Layout";
 
 const Wrapper = () => {
   return (
-    <>
+    <Layout>
       <Threetile />
       <Strips />
       <Info />
@@ -23,7 +24,7 @@ const Wrapper = () => {
       <Players />
       <Trophy />
       <Banner />
-    </>
+    </Layout>
   );
 };
 

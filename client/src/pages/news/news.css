@@ -54,7 +54,7 @@
   transition: transform 0.3s ease;
 }
 .newsdata-tiles-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin: 6px;
 }
@@ -87,6 +87,7 @@
   color: gray;
   font-size: 14px;
   transition: opacity 0.3s ease;
+  font-size: 14px;
 }
 .newsdata-tiles:hover {
   cursor: pointer;

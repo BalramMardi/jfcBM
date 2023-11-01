@@ -1,0 +1,27 @@
+.time-container {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  background: linear-gradient(to right, #ff0202, hsl(208, 100%, 43%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.time-slate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.time-let {
+  font-size: 12px;
+
+  /* background-color: aqua; */
+  height: 20px;
+}
+.time-var {
+  font-size: 35px;
+  height: 40px;
+}
