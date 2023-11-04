@@ -16,17 +16,39 @@ const matchSchema = new mongoose.Schema(
       ref: "teams",
       required: true,
     },
+    homescore: {
+      type: Number,
+      required: false,
+      default: -1,
+    },
     away: {
       type: mongoose.ObjectId,
       ref: "teams",
       required: true,
     },
+    awayscore: {
+      type: Number,
+      required: false,
+      default: -1,
+    },
     date: {
       type: Date,
+    },
+    time: {
+      type: String,
+      default: "8:00",
+    },
+    neutral: {
+      type: Boolean,
+      default: false,
     },
     done: {
       type: Boolean,
       default: false,
+    },
+    stadium: {
+      type: String,
+      required: true,
     },
     slug: {
       type: String,

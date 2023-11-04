@@ -10,6 +10,9 @@ const Strips = () => {
       <div className="strip-container">
         <div style={{ marginLeft: "100px" }}>MAIN PARTNERS</div>
         <div>|</div>
+        <div>TATA STEEL</div>
+        <div>TATA</div>
+        <div>SBI</div>
 
         <div className="partner-promo">
           {/* <img

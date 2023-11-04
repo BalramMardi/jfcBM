@@ -27,6 +27,10 @@ import AdminTeams from "./pages/admin/Team/adminTeams/AdminTeams";
 import UpdateTeams from "./pages/admin/Team/updateTeams/UpdateTeams";
 import MatchOption from "./pages/admin/Match/MatchOption/MatchOption";
 import CreateMatch from "./pages/admin/Match/CreateMatch/CreateMatch";
+import AdminMatch from "./pages/admin/Match/AdminMatch/AdminMatch";
+import UpdateMatch from "./pages/admin/Match/UpdateMatch/UpdateMatch";
+import Result from "./pages/result/Result";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -40,6 +44,9 @@ function App() {
         <Route path="/news/:slug" element={<NewsDetails />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/result" element={<Result />} />
+        <Route path="/pagenotfound" element={<PageNotFound />} />
 
         <Route path="/admin/news" element={<NewsScreen />}></Route>
         <Route path="/admin/news/create-news" element={<CreateNews />} />
@@ -63,6 +70,11 @@ function App() {
 
         <Route path="admin/matches" element={<MatchOption />} />
         <Route path="/admin/matches/create-matches" element={<CreateMatch />} />
+        <Route path="/admin/matches/admin-matches" element={<AdminMatch />} />
+        <Route
+          path="/admin/matches/admin-matches/:slug"
+          element={<UpdateMatch />}
+        />
       </Routes>
       <Footer />
     </div>

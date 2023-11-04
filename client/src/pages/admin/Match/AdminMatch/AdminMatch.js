@@ -1,51 +1,12 @@
-import "./schedule.css";
 import React, { useEffect, useState } from "react";
-
-import Layout from "../../layout/Layout";
-import { useNavigate } from "react-router";
+import "./AdminMatch.css";
+import AdminMenu from "../../../AdminMenu";
+import axios from "axios";
 import dayjs from "dayjs";
 
-import axios from "axios";
+import { useNavigate } from "react-router";
 
-const matches = [
-  {
-    no: 1,
-    day: 1,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 2,
-    day: 2,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 3,
-    day: 3,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 4,
-    day: 4,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 5,
-    day: 5,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-];
-
-const Schedule = () => {
+const AdminMatch = () => {
   const [match, setMatch] = useState([]);
   const [teamData, setTeamData] = useState([]);
   const [leagueData, setLeagueData] = useState([]);
@@ -92,18 +53,26 @@ const Schedule = () => {
   }, []);
 
   return (
-    <Layout>
-      <div className="schedule-bucket">
-        <div className="schedule-container">
-          <h1>First Team Schedule</h1>
-          {match
-            .filter((match) => !match.done)
-            .map((c) => {
+    <div className="createNews-container">
+      <AdminMenu />
+      <div className="createNews-right">
+        <div className="schedule-bucket">
+          <div className="schedule-container">
+            <h1>First Team Schedule</h1>
+            {match.map((c) => {
               const homeTeam = teamData.find((team) => team._id === c.home);
               const awayTeam = teamData.find((team) => team._id === c.away);
               const leagueUsed = leagueData.find((lea) => lea._id === c.league);
               return (
-                <div key={c._id} className="schedule-slate">
+                <div
+                  key={c._id}
+                  className={
+                    c.done ? "adminschedule-slate" : "adminschedule-slate-false"
+                  }
+                  onClick={() => {
+                    navigate(`/admin/matches/admin-matches/${c.slug}`);
+                  }}
+                >
                   <div className="scline"></div>
                   <div className="scdate">
                     <div className="scdate-info">
@@ -117,7 +86,7 @@ const Schedule = () => {
                   <div className="scline-mid">
                     <div className="scline-mid-break"></div>
                   </div>
-                  <div className="sctype">
+                  <div className="sctypeadmin">
                     <img
                       // src={`${process.env.REACT_APP_API}/api/v1/teams/teams-photo/${homeTeam._id}`}
                       // alt={homeTeam}
@@ -133,8 +102,8 @@ const Schedule = () => {
                     <div className="scline-mid-break"></div>
                   </div>
                   <div className="scnumber">
-                    <div className="scnumber-info">
-                      <div className="scnumber-info-number">
+                    <div className="scnumberadmin-info">
+                      <div className="text-sm font-bold">
                         Match No.{c.matchday}
                       </div>
                       <div className="scnumber-info-stadium">{c.stadium}</div>
@@ -143,7 +112,7 @@ const Schedule = () => {
                   <div className="scline-mid">
                     <div className="scline-mid-break"></div>
                   </div>
-                  <div className="scmain">
+                  <div className="scmainadmin">
                     <div className="scmain-home">
                       {homeTeam ? homeTeam.teamname : "Unknown Team"}
                     </div>
@@ -159,7 +128,29 @@ const Schedule = () => {
                         alt={homeTeam ? homeTeam.teamname : "Unknown Team"}
                       />
                     </div>
-                    <div className="scmain-v">VS</div>
+                    <div className="scScore">
+                      <div
+                        className="scticket-info"
+                        style={{
+                          backgroundColor: "#20295D",
+                          color: "white",
+                        }}
+                      >
+                        {c.homescore > -1 ? c.homescore : "-"}
+                      </div>
+                    </div>
+                    <div className="scmain-v">{c.done ? "FT" : "VS"}</div>
+                    <div className="scScore">
+                      <div
+                        className="scticket-info"
+                        style={{
+                          backgroundColor: "#20295D",
+                          color: "white",
+                        }}
+                      >
+                        {c.awayscore > -1 ? c.awayscore : "-"}
+                      </div>
+                    </div>
                     <div className="scmain-awaypic">
                       <img
                         // src={`${process.env.REACT_APP_API}/api/v1/teams/teams-photo/${homeTeam._id}`}
@@ -179,17 +170,26 @@ const Schedule = () => {
                   <div className="scline-mid">
                     <div className="scline-mid-break"></div>
                   </div>
-                  <div className="scticket">
-                    <div className="scticket-info">TICKET</div>
-                  </div>
+                  {/* <div className="scticket">
+                    <div
+                      className="scticket-info"
+                      style={{
+                        backgroundColor: c.done ? "green" : "red",
+                        color: "white",
+                      }}
+                    >
+                      {c.done ? "Done" : "Not Done"}
+                    </div>
+                  </div> */}
                   <div className="scline"></div>
                 </div>
               );
             })}
+          </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
-export default Schedule;
+export default AdminMatch;

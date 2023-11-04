@@ -1,0 +1,228 @@
+.schedule-bucket {
+  margin-top: 114px;
+  background-color: #242555;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.schedule-container {
+  background-color: white;
+  width: 95%;
+  border-radius: 20px 20px 0 0;
+  padding: 30px;
+}
+.schedule-container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff0202, hsl(208, 100%, 43%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adminschedule-slate {
+  background-color: white;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid #f9f9f9;
+  border-bottom: 2px solid #f9f9f9;
+}
+.adminschedule-slate-false {
+  background-color: white;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid #f9f9f9;
+  border-bottom: 2px solid #f9f9f9;
+}
+.adminschedule-slate:hover {
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.adminschedule-slate-false:hover {
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.adminschedule-slate:hover .scline {
+  visibility: visible;
+  background-color: #242555;
+}
+.adminschedule-slate-false:hover .scline {
+  visibility: visible;
+}
+.scline {
+  width: 0.4%;
+  background-color: #ff0202;
+  height: 100px;
+  visibility: hidden;
+}
+.scdate {
+  width: 12.8%;
+  /* background-color: cadetblue; */
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scdate-info {
+  /* background-color: blue; */
+  padding: 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sctypeadmin {
+  width: 8%;
+  height: 100px;
+  /* background-color: coral; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sctypeadmin img {
+  object-fit: contain;
+  width: 80%;
+}
+
+.scnumber {
+  width: 10.8%;
+  height: 100px;
+  /* background-color: deeppink; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.scnumberadmin-info {
+  /* background-color: blue; */
+  padding: 0 10px;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.scnumber-info-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+.scnumber-info-stadium {
+  font-size: 10px;
+  font-weight: normal;
+  color: grey;
+}
+.scmainadmin {
+  width: 68%;
+  height: 100px;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 22px;
+}
+.scmain-home {
+  width: 40%;
+  /* border: solid black 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.scmain-homepic {
+  width: 28%;
+  height: 80px;
+  /* border: solid black 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scmain-homepic img {
+  object-fit: contain;
+}
+.scmain-v {
+  width: 4%;
+  /* border: solid black 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff0202, hsl(208, 100%, 43%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.scmain-awaypic {
+  width: 28%;
+  height: 80px;
+
+  /* border: solid black 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scmain-awaypic img {
+  object-fit: contain;
+}
+.scmain-away {
+  width: 40%;
+  /* border: solid black 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.scScore {
+  width: 14%;
+  height: 100px;
+  /* background-color: lightcoral; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scticket {
+  width: 14%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scticket-info {
+  width: 80%;
+  height: 30px;
+  /* background-color: hsl(208, 100%, 43%); */
+  background-color: #fdc52c;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.scticket-info:hover {
+  background-color: #c6132b;
+  color: white;
+}
+.scline-mid {
+  width: 0.2%;
+
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scline-mid-break {
+  width: 100%;
+
+  background-color: #f9f9f9;
+  height: 70%;
+}

@@ -1,4 +1,4 @@
-import "./schedule.css";
+import "./result.css";
 import React, { useEffect, useState } from "react";
 
 import Layout from "../../layout/Layout";
@@ -7,45 +7,7 @@ import dayjs from "dayjs";
 
 import axios from "axios";
 
-const matches = [
-  {
-    no: 1,
-    day: 1,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 2,
-    day: 2,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 3,
-    day: 3,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 4,
-    day: 4,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-  {
-    no: 5,
-    day: 5,
-    home: "Jamshedpur",
-    away: "mohun bagan",
-    stadium: "JRD Tata Sports Complex",
-  },
-];
-
-const Schedule = () => {
+const Result = () => {
   const [match, setMatch] = useState([]);
   const [teamData, setTeamData] = useState([]);
   const [leagueData, setLeagueData] = useState([]);
@@ -95,9 +57,9 @@ const Schedule = () => {
     <Layout>
       <div className="schedule-bucket">
         <div className="schedule-container">
-          <h1>First Team Schedule</h1>
+          <h1>First Team Result</h1>
           {match
-            .filter((match) => !match.done)
+            .filter((match) => match.done)
             .map((c) => {
               const homeTeam = teamData.find((team) => team._id === c.home);
               const awayTeam = teamData.find((team) => team._id === c.away);
@@ -143,7 +105,7 @@ const Schedule = () => {
                   <div className="scline-mid">
                     <div className="scline-mid-break"></div>
                   </div>
-                  <div className="scmain">
+                  <div className="scmainresult">
                     <div className="scmain-home">
                       {homeTeam ? homeTeam.teamname : "Unknown Team"}
                     </div>
@@ -159,7 +121,31 @@ const Schedule = () => {
                         alt={homeTeam ? homeTeam.teamname : "Unknown Team"}
                       />
                     </div>
-                    <div className="scmain-v">VS</div>
+                    <div className="scScoreResult">
+                      <div
+                        className="scticket-info"
+                        style={{
+                          backgroundColor: "#20295D",
+                          color: "white",
+                          fontSize: "20px",
+                        }}
+                      >
+                        {c.homescore > -1 ? c.homescore : "-"}
+                      </div>
+                    </div>
+                    <div className="scmain-v">FT</div>
+                    <div className="scScoreResult">
+                      <div
+                        className="scticket-info"
+                        style={{
+                          backgroundColor: "#20295D",
+                          color: "white",
+                          fontSize: "20px",
+                        }}
+                      >
+                        {c.awayscore > -1 ? c.awayscore : "-"}
+                      </div>
+                    </div>
                     <div className="scmain-awaypic">
                       <img
                         // src={`${process.env.REACT_APP_API}/api/v1/teams/teams-photo/${homeTeam._id}`}
@@ -179,9 +165,7 @@ const Schedule = () => {
                   <div className="scline-mid">
                     <div className="scline-mid-break"></div>
                   </div>
-                  <div className="scticket">
-                    <div className="scticket-info">TICKET</div>
-                  </div>
+
                   <div className="scline"></div>
                 </div>
               );
@@ -192,4 +176,4 @@ const Schedule = () => {
   );
 };
 
-export default Schedule;
+export default Result;

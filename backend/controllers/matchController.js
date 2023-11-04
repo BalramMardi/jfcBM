@@ -6,7 +6,19 @@ import leagueModel from "../models/leagueModel.js";
 
 export const createMatchController = async (req, res) => {
   try {
-    const { matchday, league, home, away, date, done } = req.body;
+    const {
+      matchday,
+      league,
+      home,
+      away,
+      date,
+      done,
+      neutral,
+      stadium,
+      homescore,
+      awayscore,
+      time,
+    } = req.body;
     if (!matchday) {
       return res.status(401).send({
         message: "number name is required",
@@ -33,6 +45,11 @@ export const createMatchController = async (req, res) => {
         message: "date name is required",
       });
     }
+    if (!stadium) {
+      return res.status(401).send({
+        message: "stadium name is required",
+      });
+    }
 
     /*  const existingMatch = await matchModel.findOne({ number });
     if (existingMatch) {
@@ -50,13 +67,23 @@ export const createMatchController = async (req, res) => {
     const newword = `${leagname.leashort} ${matchday} ${hometeams.shortname} ${
       awayteams.shortname
     } ${new Date(date).getFullYear()} `;
+
+    // Create a new Date object and set the time to midnight (00:00:00) on the server
+    const dateWithoutTime = new Date(date);
+    dateWithoutTime.setUTCHours(0, 0, 0, 0); // Set the time to midnight in UTC
+
     const match = await new matchModel({
       matchday,
       league,
-      date,
+      date: dateWithoutTime,
       home,
       away,
       done,
+      neutral,
+      stadium,
+      homescore,
+      awayscore,
+      time,
       slug: slugify(newword),
     }).save();
     res.status(201).send({
@@ -77,7 +104,19 @@ export const createMatchController = async (req, res) => {
 //update
 export const updateMatchController = async (req, res) => {
   try {
-    const { league, matchday, home, away, date, done } = req.body;
+    const {
+      league,
+      matchday,
+      home,
+      away,
+      date,
+      done,
+      stadium,
+      neutral,
+      homescore,
+      awayscore,
+      time,
+    } = req.body;
     const { id } = req.params;
 
     const hometeams2 = await teamsModel.findById(home);
@@ -88,9 +127,26 @@ export const updateMatchController = async (req, res) => {
       hometeams2.shortname
     } ${awayteams2.shortname} ${new Date(date).getFullYear()}`;
 
+    // Create a new Date object and set the time to midnight (00:00:00) on the server
+    const dateWithoutTime = new Date(date);
+    dateWithoutTime.setUTCHours(0, 0, 0, 0); // Set the time to midnight in UTC
+
     const match = await matchModel.findByIdAndUpdate(
       id,
-      { league, matchday, home, away, date, done, slug: slugify(newword2) },
+      {
+        league,
+        matchday,
+        home,
+        away,
+        date: dateWithoutTime,
+        done,
+        neutral,
+        stadium,
+        homescore,
+        awayscore,
+        time,
+        slug: slugify(newword2),
+      },
       { new: true }
     );
 
@@ -114,7 +170,7 @@ export const updateMatchController = async (req, res) => {
 //get all
 export const getMatchController = async (req, res) => {
   try {
-    const match = await matchModel.find({});
+    const match = await matchModel.find({}).sort({ matchday: 1 });
     res.status(200).send({
       success: true,
       message: "All match list",
