@@ -8,6 +8,7 @@ import newsRoute from "./routes/newsRoute.js";
 import teamsRoute from "./routes/teamsRoute.js";
 import matchRoute from "./routes/matchRoute.js";
 import leagueRoute from "./routes/leagueRoute.js";
+import path from "path";
 
 //config
 dotenv.config();
@@ -35,7 +36,10 @@ app.get("/", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT;
+//static
+// app.use(express.static(path.join(__dirname,"./")))
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`.bgCyan.white);
