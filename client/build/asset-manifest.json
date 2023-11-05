@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e93a2831.css",
+    "main.js": "/static/js/main.cd2d1b2f.js",
+    "static/media/tele1.mp4": "/static/media/tele1.8358eb6784ee660c6dd1.mp4",
+    "static/media/back-10.png": "/static/media/back-10.bbdd589e288b42dfa746.png",
+    "static/media/shield.png": "/static/media/shield.115e9c4e0887e91d583d.png",
+    "static/media/jfcBW.png": "/static/media/jfcBW.02d515163aacd3476dc6.png",
+    "static/media/back-7.png": "/static/media/back-7.ff819bca3e855310553f.png",
+    "static/media/part.png": "/static/media/part.5e68e13a9015e12107d7.png",
+    "static/media/backpic.png": "/static/media/backpic.869fc429026b1e8dd290.png",
+    "static/media/ticket.png": "/static/media/ticket.9a703845e055f8e5964b.png",
+    "static/media/steel.png": "/static/media/steel.40393d6a483cb732c1bd.png",
+    "static/media/mid.jpeg": "/static/media/mid.d7b6b2e980df3b415725.jpeg",
+    "static/media/jfc.png": "/static/media/jfc.2363374425ff5ac51227.png",
+    "static/media/mbsg.png": "/static/media/mbsg.cd2075153d169c2c0a75.png",
+    "static/media/tfa.png": "/static/media/tfa.26c8eeada1a245a625d8.png",
+    "static/media/tata.png": "/static/media/tata.70c44cca74ecd046ced8.png",
+    "static/media/first.jpeg": "/static/media/first.b21bf34b9ed6a78f2716.jpeg",
+    "static/media/third.jpeg": "/static/media/third.6297a5394f11443b8a3e.jpeg",
+    "static/media/nufc.png": "/static/media/nufc.42f6f13768e279e1003e.png",
+    "static/media/sbi.png": "/static/media/sbi.51df9b581e7c12f82694.png",
+    "static/media/kb.png": "/static/media/kb.276e782ef35fbba97a2d.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.e93a2831.css.map": "/static/css/main.e93a2831.css.map",
+    "main.cd2d1b2f.js.map": "/static/js/main.cd2d1b2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e93a2831.css",
+    "static/js/main.cd2d1b2f.js"
+  ]
+}
